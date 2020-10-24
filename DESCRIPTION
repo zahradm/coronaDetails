@@ -8,3 +8,5 @@ Description: Analyze coronavirus data
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+URL: https://github.com/zahradm/coronaDetails
+BugReports: https://github.com/zahradm/coronaDetails/issues
