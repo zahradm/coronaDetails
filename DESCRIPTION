@@ -1,0 +1,10 @@
+Package: coronaDetails
+Type: Package
+Title: Analyze coronavirus data
+Version: 0.1.0
+Author@R: c("Zahra","Dehghani",email="zh.dehghani741@gmail.com",role=c("cre","aut"))
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: Analyze coronavirus data
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
