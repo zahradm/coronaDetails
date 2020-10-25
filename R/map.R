@@ -1,5 +1,7 @@
 
 library(maps)
+library(ggplot2)
+library(dplyr)
 map <- function(type,date){
   date = gsub("/" , ".",date)
   date = paste0("X", date)
@@ -20,7 +22,6 @@ map <- function(type,date){
     geom_polygon(data = world, aes(x=long, y = lat, group = group), fill="grey", alpha=0.3) +
     geom_point(data=data, aes(x=Long, y=Lat, size=count, color=count),stroke=F, alpha=0.7) +
     scale_size_continuous(name="Cases", trans="log", range=c(1,7),breaks=mybreaks, labels = c("1-19", "20-99", "100-999", "1,000-49,999", "50,000+")) +
-    # scale_alpha_continuous(name="Cases", trans="log", range=c(0.1, 0.9),breaks=mybreaks) +
     scale_color_viridis_c(option="inferno",name="Cases", trans="log",breaks=mybreaks, labels = c("1-19", "20-99", "100-999", "1,000-49,999", "50,000+")) +
     theme_void() +
     guides( colour = guide_legend()) +
