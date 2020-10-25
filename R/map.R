@@ -1,5 +1,7 @@
 
 library(maps)
+library(ggplot2)
+library(dplyr)
 map <- function(type,date){
   date = gsub("/" , ".",date)
   date = paste0("X", date)
