@@ -4,13 +4,37 @@
 # date = "confirmed or death  of coronaviruce from first day to this date"
 # output is  a map of the world with the count of coronavirus by country
 
+#' @title map
+#'
+#' @description Coronaviruce map of world
+#'
+#' @param type selelct "death" or "confirmed"
+#'
+#' @param date format "m/d/y" y has includ 2 digit
+#'
+#' @return A world map of coronaviruce deathes and confirmed cases
+#' @export
+#' @importFrom maps map_data
+#' @importFrom dplyr select
+#' @importFrom ggplot2 geom_polygon
+#' @importFrom ggplot2 geom_point
+#' @importFrom ggplot2 scale_size_continuous
+#' @importFrom ggplot2 scale_color_viridis_c
+#' @importFrom ggplot2 theme_void
+#' @importFrom ggplot2 guides
+#' @importFrom ggplot2 theme
+#'
+#' @example
+#' z <- map("death","1/26/20")
+#'
 
 
 library(maps)
 library(ggplot2)
 library(dplyr)
 map <- function(type,date){
-
+date ="1/27/20"
+type ="confirmed"
   date = gsub("/" , ".",date)
   date = paste0("X", date)
   if(type=="death"){

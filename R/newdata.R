@@ -5,17 +5,16 @@
 #'
 #' @description Create a csv file that include number of confirmed cases and death cases of coronaviruce
 #'
+#'
 #' @return A csv file from new coronaviruce statistics by country
-#'
 #' @export
+#' @importFrom dplyr group_by
+#' @importFrom dplyr summarise
 #'
-#' @importFrom dplyr
 #'
 #' @example
-#'
-#' \donturn{
-#' newdata()
-#' }
+#' c <- newdata()
+
 library(dplyr)
 newdata <- function(){
   dfc = read.csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv")

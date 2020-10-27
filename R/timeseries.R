@@ -1,17 +1,37 @@
 # timeserie plot of coronaviruce
 # satar = start of the date that wants to draw the plot
 # end = end of the date that wants to draw the
-# country = country :)
+# country = country
 # output is a line plot
 
+
+#' @title timeseries plot
+#'
+#' @description Plot with statr and end date by contury of coronaviruce death and confirmed
+#'
+#' @param start Date of start format of date is
+#'
+#' @param  end Date
+#'
+#' @param  country country
+#'
+#' @return a plot
+#' @export
+#' @importFrom dplyr filter
+#' @importFrom tibble rownames_to_column
+#' @importFrom reshape2 melt
+#' @importFrom dplyr mutate
+#' @importFrom dplyr full_join
+#' @importFrom ggplot2 geom_line
+#'
+#'
+#' @example
+#' y <- timeseries("2020-01-25","2020-11-25","Iran")
 
 library(dplyr)
 library(tibble)
 library(reshape2)
 library(ggplot2)
-library(dplyr)
-library(plotly)
-library(hrbrthemes)
 library(lubridate)
 timeseries <- function(start,end,country){
   datac <- read.csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv")
