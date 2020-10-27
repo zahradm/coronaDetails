@@ -1,3 +1,10 @@
+# timeserie plot of coronaviruce
+# satar = start of the date that wants to draw the plot
+# end = end of the date that wants to draw the
+# country = country :)
+# output is a line plot
+
+
 library(dplyr)
 library(tibble)
 library(reshape2)

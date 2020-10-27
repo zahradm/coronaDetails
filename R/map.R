@@ -1,8 +1,16 @@
 
+# Map of coronaviruce confiremed and death cases distribution
+# ype = "death" or "confirmed"
+# date = "confirmed or death  of coronaviruce from first day to this date"
+# output is  a map of the world with the count of coronavirus by country
+
+
+
 library(maps)
 library(ggplot2)
 library(dplyr)
 map <- function(type,date){
+
   date = gsub("/" , ".",date)
   date = paste0("X", date)
   if(type=="death"){
