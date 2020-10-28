@@ -23,5 +23,6 @@ devtools::install_github("zahradm/coronaDetails")
 The newdata() function get data from Johns Hopkins University and output
 is a csv file that contains number of confirmed and death cases
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!
+The map(type,date) function output is a map of world that shows distribution of coronaviruce cases
+
+The timeseries(start,end,country) function output ia a line plot 
