@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# coronaDetails <img src="man/coronaDetais.png" align="right" width="120" />
+# coronaDetails <img src="man/coronaDetails.png" align="right" width="120" />
 
 <!-- badges: start -->
 
